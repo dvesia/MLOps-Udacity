@@ -1,6 +1,6 @@
 # __Customer Churn Project__
 
-    This project it's for to identify credit card customers that are most likely to churn. The completed project will include a Python package for a machine learning project that follows coding (PEP8) and engineering best practices for implementing software (modular, documented, and tested). The package will also have the flexibility of being run interactively or from the command-line interface (CLI).
+This project it's for to identify credit card customers that are most likely to churn. The completed project will include a Python package for a machine learning project that follows coding (PEP8) and engineering best practices for implementing software (modular, documented, and tested). The package will also have the flexibility of being run interactively or from the command-line interface (CLI).
 
 ## __Files Description__
 
@@ -8,16 +8,16 @@
 
 ### __churn_library.py__
 
-    Library of functions to find customers who are likely to churn. 
+Library of functions to find customers who are likely to churn. 
 
 ### __churn_script_logging_and_tests.py__  
 
-    - Contain unit tests for the churn_library.py functions. 
-    - Log any errors and INFO messages. 
+- Contain unit tests for the churn_library.py functions. 
+- Log any errors and INFO messages. 
 
 ### __constants.py__  
 
-    Contain costant used by function in upper files 
+Contain costant used by function in upper files 
 
 ## __Running Files__
 
@@ -26,7 +26,7 @@
 ### __churn_library.py__
 
     ipython churn_library.py
-    
+
 ### __churn_script_logging_and_tests.py__
 
     pytest -v churn_script_logging_and_tests.py
