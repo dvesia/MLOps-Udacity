@@ -7,8 +7,6 @@ Date: 2021-05-26
 """
 
 # import libraries
-from unicodedata import name
-import constants
 import joblib
 import pandas as pd
 import numpy as np
@@ -23,6 +21,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import GridSearchCV
 
 from sklearn.metrics import plot_roc_curve, classification_report
+
+import constants
 
 
 def create_dataframe_from_csv(path):
@@ -334,3 +334,12 @@ def train_models(x_train, x_test, y_train, y_test, x_data):
     feature_importance_plot(
         models_feature_importances_dictionary, x_data, path)
     plot_performances_curve(models, x_test, y_test, path)
+
+if __name__ == "__main__":
+    path = constants.PATH
+    dataframe = create_dataframe_from_csv(path)
+    perform_eda(dataframe)
+    encoded_dataframe = encoder_helper(dataframe)
+    x_train, x_test, y_train, y_test, x_data = preprocessing(encoded_dataframe)
+    train_models(x_train, x_test, y_train, y_test, x_data)
+    

@@ -5,7 +5,7 @@ This is a constants script.
 Author: Domenico Vesia
 Date: 2021-05-26
 """
-
+PATH = "data/bank_data.csv"
 COLUMNS_TO_KEEP = [
     "Customer_Age",
     "Gender_Churn",
