@@ -25,7 +25,8 @@ def go(args):
     df = pd.read_csv(artifact_path)
 
     logger.info("Preparing dataframe")
-    idx = df['price'].between(args.min_price, args.max_price)
+    #idx = df['price'].between(args.min_price, args.max_price)
+    idx = (df['price'] >= args.min_price) & (df['price'] <= args.max_price)
     df = df[idx].copy()
     idx = idx = df['longitude'].between(-74.25, -73.50) & df['latitude'].between(40.5, 41.2)
     df = df[idx].copy()
